@@ -1,0 +1,186 @@
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1594564211.1114154,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ablazleon-udagram-api-feed-pr-2-cwhjr-x5s92[0m
+{"level":"info","ts":1594564223.3495579,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*********/udagram-api-feed.git @ master in path /workspace/source"}
+{"level":"warn","ts":1594564223.349654,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1594564223.5224013,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:e8d02d4214699e0694db9a90df9a5b360950f722,2:1c8644197561d6ef72797e9e5f8f26139f918cd4
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 1c8644197561d6ef72797e9e5f8f26139f918cd4: e8d02d4214699e0694db9a90df9a5b360950f722:
+DEBUG: ran git fetch --unshallow origin 1c8644197561d6ef72797e9e5f8f26139f918cd4: e8d02d4214699e0694db9a90df9a5b360950f722: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard e8d02d4214699e0694db9a90df9a5b360950f722
+DEBUG: ran git reset --hard e8d02d4214699e0694db9a90df9a5b360950f722 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 1c8644197561d6ef72797e9e5f8f26139f918cd4
+DEBUG: ran git merge 1c8644197561d6ef72797e9e5f8f26139f918cd4 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e e8d02d4214699e0694db9a90df9a5b360950f722..HEAD
+Merged SHA 1c8644197561d6ef72797e9e5f8f26139f918cd4 with commit message 'Update package.json' into base branch master
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+
+> bcrypt@3.0.6 install /workspace/source/node_modules/bcrypt
+> node-pre-gyp install --fallback-to-build
+
+node-pre-gyp WARN Using needle for node-pre-gyp https download 
+[bcrypt] Success: "/workspace/source/node_modules/bcrypt/lib/binding/bcrypt_lib.node" is installed via remote
+npm WARN udagram-api@2.0.0 No description
+npm WARN udagram-api@2.0.0 No repository field.
+
+added 511 packages from 965 contributors and audited 515 packages in 21.504s
+found 22 vulnerabilities (21 low, 1 moderate)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> udagram-api@2.0.0 test /workspace/source
+> echo "Error: no test specified" 
+
+Error: no test specified
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0712 14:30:50.772953      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:13            
+E0712 14:30:51.257416      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0712 14:30:51.263257      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0001] Retrieving image manifest node:13            
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest node:13            
+[36mINFO[0m[0002] Retrieving image manifest node:13            
+[36mINFO[0m[0002] Executing 0 build triggers                   
+[36mINFO[0m[0002] Resolving srcs [package*.json]...            
+[36mINFO[0m[0002] Checking for cached layer gcr.io/myenv-283021/cache:44ca7cab85c5ab720df81aee214cee256e3c6a7807abb1a389747ad476bd1f1d... 
+[36mINFO[0m[0003] No cached layer found for cmd COPY package*.json ./ 
+[36mINFO[0m[0009] cmd: EXPOSE                                  
+[36mINFO[0m[0009] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0009] Unpacking rootfs as cmd COPY package*.json ./ requires it. 
+[36mINFO[0m[0042] WORKDIR /usr/src/app                         
+[36mINFO[0m[0042] cmd: workdir                                 
+[36mINFO[0m[0042] Changed working directory to /usr/src/app    
+[36mINFO[0m[0042] Creating directory /usr/src/app              
+[36mINFO[0m[0042] Resolving 1 paths                            
+[36mINFO[0m[0042] Taking snapshot of files...                  
+[36mINFO[0m[0042] Resolving srcs [package*.json]...            
+[36mINFO[0m[0044] COPY package*.json ./                        
+[36mINFO[0m[0044] Resolving srcs [package*.json]...            
+[36mINFO[0m[0045] Resolving 2 paths                            
+[36mINFO[0m[0045] Taking snapshot of files...                  
+[36mINFO[0m[0045] Pushing layer gcr.io/myenv-283021/cache:44ca7cab85c5ab720df81aee214cee256e3c6a7807abb1a389747ad476bd1f1d to cache now 
+[36mINFO[0m[0045] RUN npm install                              
+[36mINFO[0m[0045] Taking snapshot of full filesystem...        
+[36mINFO[0m[0051] Resolving 40712 paths                        
+[36mINFO[0m[0059] cmd: /bin/sh                                 
+[36mINFO[0m[0059] args: [-c npm install]                       
+[36mINFO[0m[0059] Running: [/bin/sh -c npm install]            
+
+> bcrypt@3.0.6 install /usr/src/app/node_modules/bcrypt
+> node-pre-gyp install --fallback-to-build
+
+node-pre-gyp WARN Using needle for node-pre-gyp https download 
+node-pre-gyp WARN Tried to download(404): https://github.com/kelektiv/node.bcrypt.js/releases/download/v3.0.6/bcrypt_lib-v3.0.6-node-v79-linux-x64-glibc.tar.gz 
+node-pre-gyp WARN Pre-built binaries not found for bcrypt@3.0.6 and node@13.14.0 (node-v79 ABI, glibc) (falling back to source compile with node-gyp) 
+make: Entering directory '/usr/src/app/node_modules/bcrypt/build'
+  CXX(target) Release/obj.target/bcrypt_lib/src/blowfish.o
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt.o
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt_node.o
+  SOLINK_MODULE(target) Release/obj.target/bcrypt_lib.node
+  COPY Release/bcrypt_lib.node
+  COPY /usr/src/app/node_modules/bcrypt/lib/binding/bcrypt_lib.node
+  TOUCH Release/obj.target/action_after_build.stamp
+make: Leaving directory '/usr/src/app/node_modules/bcrypt/build'
+npm WARN udagram-api@2.0.0 No description
+npm WARN udagram-api@2.0.0 No repository field.
+
+added 511 packages from 965 contributors and audited 515 packages in 31.599s
+
+6 packages are looking for funding
+  run `npm fund` for details
+
+found 22 vulnerabilities (21 low, 1 moderate)
+  run `npm audit fix` to fix them, or `npm audit` for details
+[36mINFO[0m[0092] Taking snapshot of full filesystem...        
+[36mINFO[0m[0097] Resolving 62325 paths                        
+[36mINFO[0m[0120] Pushing layer gcr.io/myenv-283021/cache:04635e0499fdf282ccc490cf0103bba86002afca55ad4e56184cf1d821f32c40 to cache now 
+[36mINFO[0m[0122] COPY . .                                     
+[36mINFO[0m[0125] Resolving 239 paths                          
+[36mINFO[0m[0126] Taking snapshot of files...                  
+[36mINFO[0m[0126] EXPOSE 8080                                  
+[36mINFO[0m[0126] cmd: EXPOSE                                  
+[36mINFO[0m[0126] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0126] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0126] CMD [ "npm", "run", "prod" ]                 
+[36mINFO[0m[0126] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0126] Pushing layer gcr.io/myenv-283021/cache:87f0328dcd2be1f037a60740f20c0bcf033fcd73d3d9373bd34c4b90cf257cc5 to cache now 
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-2-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-2-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/myenv-283021\/udagram-api-feed|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-2-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-2-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mablazleon-udagram-api-feed-pr-2-cwhjr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Found commit author match for: ********* with email address: adrian.blazquez.leon@alumnos.upm.es
+Created environment *********-udagram-api-feed-pr-2
+Namespace **-*********-udagram-api-feed-pr-2 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 104.196.111.23.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: gcr.io/myenv-283021/udagram-api-feed
+    tag: 0.0.0-SNAPSHOT-PR-2-1
+
+Updating PipelineActivities *********-udagram-api-feed-pr-2-1 which has status Running
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 783.034151ms
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.077829579s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 2.409014871s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 2.690153652s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 6.912008504s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 4.011801539s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 16.803924065s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 9.553100503s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 17.255077299s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 29.928448281s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 43.452942397s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 51.708328829s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1m23.66170376s
+WARNING: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 34.457459937s
+error: error checking if preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io is available: preview application http://udagram-api-feed.**-*********-udagram-api-feed-pr-2.104.196.111.23.nip.io not available, error was 503 503 Service Temporarily Unavailable
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-jx-preview'. The execution of the pipeline has stopped.[0m
