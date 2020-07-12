@@ -1,0 +1,157 @@
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1594564216.8683095,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ablazleon-udagram-api-feed-mast-r6vlc-qzmsn[0m
+{"level":"info","ts":1594564228.2293255,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*********/udagram-api-feed.git @ v0.0.3 in path /workspace/source"}
+{"level":"warn","ts":1594564228.2294216,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1594564228.2814665,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:84a416d6d14ea3a2473bf7ee0025055987b49f9e
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+
+> bcrypt@3.0.6 install /workspace/source/node_modules/bcrypt
+> node-pre-gyp install --fallback-to-build
+
+node-pre-gyp WARN Using needle for node-pre-gyp https download 
+[bcrypt] Success: "/workspace/source/node_modules/bcrypt/lib/binding/bcrypt_lib.node" is installed via remote
+npm WARN udagram-api@2.0.0 No description
+npm WARN udagram-api@2.0.0 No repository field.
+
+added 511 packages from 965 contributors and audited 515 packages in 25.766s
+found 22 vulnerabilities (21 low, 1 moderate)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> udagram-api@2.0.0 test /workspace/source
+> echo "Error: no test specified" 
+
+Error: no test specified
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0712 14:31:00.328553      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Retrieving image manifest node:13            
+E0712 14:31:00.593281      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0712 14:31:00.596789      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0001] Retrieving image manifest node:13            
+[36mINFO[0m[0001] Built cross stage deps: map[]                
+[36mINFO[0m[0001] Retrieving image manifest node:13            
+[36mINFO[0m[0001] Retrieving image manifest node:13            
+[36mINFO[0m[0002] Executing 0 build triggers                   
+[36mINFO[0m[0002] Resolving srcs [package*.json]...            
+[36mINFO[0m[0002] Checking for cached layer gcr.io/myenv-283021/cache:44ca7cab85c5ab720df81aee214cee256e3c6a7807abb1a389747ad476bd1f1d... 
+[36mINFO[0m[0002] No cached layer found for cmd COPY package*.json ./ 
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0003] Unpacking rootfs as cmd COPY package*.json ./ requires it. 
+[36mINFO[0m[0037] WORKDIR /usr/src/app                         
+[36mINFO[0m[0037] cmd: workdir                                 
+[36mINFO[0m[0037] Changed working directory to /usr/src/app    
+[36mINFO[0m[0037] Creating directory /usr/src/app              
+[36mINFO[0m[0037] Resolving 1 paths                            
+[36mINFO[0m[0037] Taking snapshot of files...                  
+[36mINFO[0m[0037] Resolving srcs [package*.json]...            
+[36mINFO[0m[0038] COPY package*.json ./                        
+[36mINFO[0m[0038] Resolving srcs [package*.json]...            
+[36mINFO[0m[0039] Resolving 2 paths                            
+[36mINFO[0m[0039] Taking snapshot of files...                  
+[36mINFO[0m[0039] RUN npm install                              
+[36mINFO[0m[0039] Taking snapshot of full filesystem...        
+[36mINFO[0m[0039] Pushing layer gcr.io/myenv-283021/cache:44ca7cab85c5ab720df81aee214cee256e3c6a7807abb1a389747ad476bd1f1d to cache now 
+[36mINFO[0m[0041] Resolving 40712 paths                        
+[36mINFO[0m[0049] cmd: /bin/sh                                 
+[36mINFO[0m[0049] args: [-c npm install]                       
+[36mINFO[0m[0049] Running: [/bin/sh -c npm install]            
+
+> bcrypt@3.0.6 install /usr/src/app/node_modules/bcrypt
+> node-pre-gyp install --fallback-to-build
+
+node-pre-gyp WARN Using needle for node-pre-gyp https download 
+node-pre-gyp WARN Tried to download(404): https://github.com/kelektiv/node.bcrypt.js/releases/download/v3.0.6/bcrypt_lib-v3.0.6-node-v79-linux-x64-glibc.tar.gz 
+node-pre-gyp WARN Pre-built binaries not found for bcrypt@3.0.6 and node@13.14.0 (node-v79 ABI, glibc) (falling back to source compile with node-gyp) 
+make: Entering directory '/usr/src/app/node_modules/bcrypt/build'
+  CXX(target) Release/obj.target/bcrypt_lib/src/blowfish.o
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt.o
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt_node.o
+  SOLINK_MODULE(target) Release/obj.target/bcrypt_lib.node
+  COPY Release/bcrypt_lib.node
+  COPY /usr/src/app/node_modules/bcrypt/lib/binding/bcrypt_lib.node
+  TOUCH Release/obj.target/action_after_build.stamp
+make: Leaving directory '/usr/src/app/node_modules/bcrypt/build'
+npm WARN udagram-api@2.0.0 No description
+npm WARN udagram-api@2.0.0 No repository field.
+
+added 511 packages from 965 contributors and audited 515 packages in 31.162s
+
+6 packages are looking for funding
+  run `npm fund` for details
+
+found 22 vulnerabilities (21 low, 1 moderate)
+  run `npm audit fix` to fix them, or `npm audit` for details
+[36mINFO[0m[0082] Taking snapshot of full filesystem...        
+[36mINFO[0m[0087] Resolving 62325 paths                        
+[36mINFO[0m[0111] Pushing layer gcr.io/myenv-283021/cache:04635e0499fdf282ccc490cf0103bba86002afca55ad4e56184cf1d821f32c40 to cache now 
+[36mINFO[0m[0113] COPY . .                                     
+[36mINFO[0m[0116] Resolving 217 paths                          
+[36mINFO[0m[0116] Taking snapshot of files...                  
+[36mINFO[0m[0117] Pushing layer gcr.io/myenv-283021/cache:53379d89c623343fefa330aba032f20dd6805d1db62ecdbef8d53307b89868cf to cache now 
+[36mINFO[0m[0117] EXPOSE 8080                                  
+[36mINFO[0m[0117] cmd: EXPOSE                                  
+[36mINFO[0m[0117] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0117] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0117] CMD [ "npm", "run", "prod" ]                 
+[36mINFO[0m[0117] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/udagram-api-feed to an unshallow repository
+Generating change log from git ref 841aa9af88311f366933d8f4f348898c45448fb7 => 493ae26062b0bde2af4f1b8899c36241b45467dc
+Associating user ********* in users.jenkins.io with email adrian.blazquez.leon@alumnos.upm.es to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ********* in users.jenkins.io
+WARNING: Failed to enrich commit 1c8644197561d6ef72797e9e5f8f26139f918cd4 with issues: User.jenkins.io "*********" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: Failed to enrich commit 1c8644197561d6ef72797e9e5f8f26139f918cd4 with issues: users.jenkins.io "x-0" already exists
+Finding issues in commit messages using git format
+WARNING: No release found for *********/udagram-api-feed and tag v0.0.3 so creating a new release
+Updated the release information at https://github.com/*********/udagram-api-feed/releases/tag/v0.0.3
+generated: /workspace/source/charts/udagram-api-feed/templates/release.yaml
+Created Release udagram-api-feed-0-0-3 resource in namespace **
+Updating PipelineActivity *********-udagram-api-feed-master-3 with version 0.0.3
+Updated PipelineActivities *********-udagram-api-feed-master-3 with release notes URL: https://github.com/*********/udagram-api-feed/releases/tag/v0.0.3
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file udagram-api-feed-0.0.3.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-r6vlc-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app udagram-api-feed version 0.0.3 to namespace **-staging
+error: pulling environment repo https://github.com/*********/environment-mycluster-staging.git into /tmp/create-pr549951581: getting repository *********/environment-mycluster-staging: failed to get repository *********/environment-mycluster-staging due to: GET https://api.github.com/repos/*********/environment-mycluster-staging: 404 Not Found []
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-jx-promote'. The execution of the pipeline has stopped.[0m
